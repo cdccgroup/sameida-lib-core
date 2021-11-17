@@ -196,7 +196,7 @@ class SAMLocalFile:
         except Exception:
             date_in_name = False
         
-        self.file_stats = stat(self.path)
+        self.file_stats = stat(self._file_path_in)
         self.set_file_times(date_in_name)
         self.file_floor_time = self.file_times[get_floor_value_key(**self.file_times)]
         self.file_metadata = {"metadata": "Goes Here"}
