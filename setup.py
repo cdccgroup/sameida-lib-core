@@ -24,7 +24,7 @@ setup(
     author=about['__author__'],
     author_email=about['__author_email__'],
     url=about['__url__'],
-    packages=['py_pkg'],
+    packages=['samedialib'],
     include_package_data=True,
     python_requires=">=3.9.*",
     install_requires=['ulid-py'],
