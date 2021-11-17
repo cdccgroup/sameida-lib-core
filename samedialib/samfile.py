@@ -124,7 +124,7 @@ class FilePath:
     def __post_init__(self):
         """Parse input arg path and populate secondary attributes."""
 
-        self.path_type = self._parse_path(self.path)
+        self.path_type = self._parse_path()
 
     
     def _parse_path(self) -> str:
