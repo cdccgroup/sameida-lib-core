@@ -55,7 +55,7 @@ def valid_timestamp(ts_in: float=False, low: float=0, high: float=time.time()):
 def get_floor_value_key(**kwargs):
     """Return the key cooresponding with the lowest value in kwargs"""
     try:
-        min_key = kwargs[min(kwargs.keys(), key=(lambda k: kwargs[k]))]
+        min_key = min(kwargs.keys(), key=(lambda k: kwargs[k]))
         return min_key
     except Exception:
         return False
