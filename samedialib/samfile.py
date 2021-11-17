@@ -179,7 +179,7 @@ class SAMLocalFile:
         except Exception:
             return False
         
-        self.process_stats(self)
+        self.process_stats()
 
         
     def process_stats(self):
