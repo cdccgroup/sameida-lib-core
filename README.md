@@ -1,2 +1,2 @@
-# sameida-lib-core
+# samedialib
 Utility library for synesthetic aesthetic media

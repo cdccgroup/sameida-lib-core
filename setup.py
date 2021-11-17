@@ -3,10 +3,10 @@
 import os
 from setuptools import setup
 
-# get key package details from samedia_lib_core/__version__.py
+# get key package details from samedialib/__version__.py
 about = {}  # type: ignore
 here = os.path.abspath(os.path.dirname(__file__))
-with open(os.path.join(here, 'samedia_lib_core', '__version__.py')) as f:
+with open(os.path.join(here, 'samedialib', '__version__.py')) as f:
     exec(f.read(), about)
 
 # load the README file and use it as the long_description for PyPI
@@ -31,7 +31,7 @@ setup(
     license=about['__license__'],
     zip_safe=False,
     entry_points={
-        'console_scripts': ['samedia-lib-core=samedia_lib_core.entry_points:main'],
+        'console_scripts': ['samedia-lib-core=samedialib.entry_points:main'],
     },
     classifiers=[
         'Development Status :: 0.1 - Alpha',
