@@ -204,9 +204,9 @@ class SAMLocalFile:
 
     def set_file_times(self, date_in_name=False):
         t = {}
-        if self.file_stats.st_atime_ns: t["atime"] = self.file_stats.st_atime_ns
-        if self.file_stats.st_ctime_ns: t["ctime"] = self.file_stats.st_ctime_ns
-        if self.file_stats.st_mtime_ns: t["mtime"] = self.file_stats.st_mtime_ns
+        if self.file_stats.st_atime_ns: t["atime"] = self.file_stats.st_atime
+        if self.file_stats.st_ctime_ns: t["ctime"] = self.file_stats.st_ctime
+        if self.file_stats.st_mtime_ns: t["mtime"] = self.file_stats.st_mtime
         if date_in_name: t["name_time"] = date_in_name
         t["process_time"] = time.time()
 
