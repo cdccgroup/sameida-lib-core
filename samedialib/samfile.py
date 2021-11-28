@@ -199,7 +199,7 @@ class SAMLocalFile:
         self.file_stats = stat(self._file_path_in)
         self.set_file_times(date_in_name)
         self.file_floor_time = self.file_times[get_floor_value_key(**self.file_times)]
-        self.file_floor_datestamp = datetime(self.file_floor_time).strftime('%Y-%m-%d %H:%M:%S')
+        self.file_floor_datestamp = datetime.datetime(self.file_floor_time).strftime('%Y-%m-%d %H:%M:%S')
         self.file_metadata = {"metadata": "Goes Here"}
 
 
