@@ -1,4 +1,4 @@
-"""samedialib.samulid.py
+\l"""samedialib.samulid.py
 
 Ulid features of synesthetic aesthetic media.
 """
@@ -27,5 +27,9 @@ class SAMUlid:
     sam_ulid_sub_dir: field(init=False,compare=False)
     sam_ulid_seed_time: field(init=False,compare=False)
 
-
+    def __post_init__(self):
+        """ set secondary values """
+        self.sam_ulid_sub_dir = self.sam_ulid.str[0:4]
+        self.sam_seed_time = self.sam_ulid.timestamp()
+        
     
