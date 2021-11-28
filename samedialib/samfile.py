@@ -86,7 +86,7 @@ class FileName:
         """Determine secondary attributes"""
 
         self.no_ext, self.ext = path.splitext(self.basename)
-        self.mime_type = mimetypes.guess_type(self.basename)
+        self.mime_type = mimetypes.guess_type(self.basename)[0]
 
     def set_basename(self, new_basename: str):
         """Set basename attribute and determine secondary attributes"""
@@ -196,7 +196,7 @@ class SAMLocalFile:
         except Exception:
             date_in_name = False
         
-        self.file_stats = stat(self._file_path_in)
+        self.file_stats = stat_results(self._file_path_in)
         self.set_file_times(date_in_name)
         self.file_floor_time = self.file_times[get_floor_value_key(**self.file_times)]
         self.file_metadata = {"metadata": "Goes Here"}
