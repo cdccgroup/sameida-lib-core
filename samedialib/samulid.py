@@ -1,4 +1,4 @@
-\l"""samedialib.samulid.py
+"""samedialib.samulid.py
 
 Ulid features of synesthetic aesthetic media.
 """
